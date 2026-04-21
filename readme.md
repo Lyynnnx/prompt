@@ -295,7 +295,6 @@ We are building a community around PROMPT! Whether you are an instructor using t
 We welcome contributions of all kinds! Please see our [Contributing Guidelines](./CONTRIBUTING.md) to get started.
 
 ---
-
 ## Configuration
 
 PROMPT can be customized for your course by composing it from different modular phases. These configurations are handled at the course level and dynamically loaded on demand.
