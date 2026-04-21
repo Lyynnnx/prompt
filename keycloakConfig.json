@@ -2028,6 +2028,34 @@
         ]
       },
       {
+      "id": "e1b2c3d4-5e6f-7a8b-9c0d-112233445566",
+      "alias": "browser-passkey",
+      "description": "Browser flow with Passkey support",
+      "providerId": "basic-flow",
+      "topLevel": true,
+      "builtIn": false,
+      "authenticationExecutions": [
+          {
+          "authenticator": "auth-cookie",
+          "requirement": "ALTERNATIVE",
+          "priority": 10,
+          "userSetupAllowed": false
+          },
+          {
+          "authenticator": "webauthn-authenticator-passwordless",
+          "requirement": "ALTERNATIVE",
+          "priority": 20,
+          "userSetupAllowed": true
+          },
+          {
+          "authenticator": "auth-username-password-form",
+          "requirement": "ALTERNATIVE",
+          "priority": 30,
+          "userSetupAllowed": false
+          }
+        ]
+      },
+      {
         "id": "c5b5120c-1085-41fa-ad20-725063b99c27",
         "alias": "browser",
         "description": "browser based authentication",
@@ -2463,7 +2491,7 @@
         "config": {}
       }
     ],
-    "browserFlow": "browser",
+    "browserFlow": "browser-passkey",
     "registrationFlow": "registration",
     "directGrantFlow": "direct grant",
     "resetCredentialsFlow": "reset credentials",
